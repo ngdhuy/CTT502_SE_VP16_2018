@@ -1,0 +1,17 @@
+.divContainer{
+    height: 640px;
+    width: 100%;
+}
+
+img{
+    position: absolute;
+}
+
+#img_1{
+    margin-left: -1280px;
+}
+
+#img_2{
+    margin-left: 0px; 
+}
+

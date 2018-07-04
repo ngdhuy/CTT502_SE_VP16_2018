@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/myStyle.css" />
+</head>
+<body>
+    <h1>Quản lý học viên</h1>
+    <form action="#">
+        <fieldset>
+            <legend>Thông tin học viên</legend>
+            <div>
+                <span>Mã học viên:</span>
+                <input type="number" id="txtMSHV" required />
+            </div>
+            <div>
+                <span>Họ tên:</span>
+                <input type="text" id="txtHoTen" required />
+             </div>
+             <div>
+                 <span>Lớp:</span>
+                 <select id="cmbLop">
+                     <option value="C1709G">C1709G</option>
+                     <option value="C1712L">C1712L</option>
+                     <option value="C1709L">C1709L</option>
+                 </select>
+             </div>
+             <div>
+                <button type="button" onclick="ThemMoi()">Thêm mới</button>
+                <button type="button" onclick="CapNhat()">Cập nhật</button>
+                <button type="button" onclick="Xoa()">Xóa</button>
+             </div>
+        </fieldset>
+    </form>
+
+    <h2>Danh sách học viên</h2>
+    <table id="DanhSachHocVien">
+        <tr>
+            <th width="150">Mã số học viên</th>
+            <th width="300">Họ tên học viên</th>
+            <th width="100">Lớp học</th>
+            <th width="200">Chức năng</th>
+        </tr>
+    </table>
+
+    <script src="js/myScript.js"></script>
+</body>
+</html>

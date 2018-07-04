@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo event - 01</title>
+</head>
+<body>
+    <img src="img/WorldCup2018.jpg" width="300" 
+        onclick="DoiMau(1)"
+        onmouseover="DoiMau(2)"
+        onmouseout="DoiMau(3)"
+    />
+
+    <input type="text" value="hello world"
+        onfocus="DoiMau(4)"
+        onblur="DoiMau(5)"
+    />
+
+    <input type="text" value="default"
+        onchange="DoiMau(6)" 
+    />
+
+    <script type="text/javascript">
+        function DoiMau(code){
+            switch(code){
+                case 1:
+                    document.bgColor = "#cc3366";
+                    break;
+                case 2:
+                    document.bgColor = "#33cc66";
+                    break;
+                case 3:
+                    document.bgColor = "#6633cc";
+                    break;
+                case 4:
+                    document.bgColor = "#3366cc"
+                    break;
+                case 5:
+                    document.bgColor = "#798822";
+                    break;
+                case 6:
+                    document.bgColor = "#aabbff";
+                    break; 
+            }
+            
+        }
+    </script>
+</body>
+</html>

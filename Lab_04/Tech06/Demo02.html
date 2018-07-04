@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo 02</title>
+</head>
+<body>
+    Hello
+    <div id="listProduct">
+        Title of List Product
+        <p>Product 01</p>
+        <p>Product 02</p>
+        <p>Product 03</p>
+        <h5>END</h5>
+    </div>
+    World
+
+    <script type="text/javascript">
+        var listProduct = document.getElementById("listProduct");
+        console.log(listProduct);
+
+        console.log("InnerHTML = " + listProduct.innerHTML);
+        console.log("InnerText = " + listProduct.innerText);
+
+        console.log("OuterHTML = " + listProduct.outerHTML);
+        console.log("OuterText = " + listProduct.outerText);
+
+        listProduct.outerText = "<Khoa hoc tu nhien>"
+    </script>
+</body>
+</html>

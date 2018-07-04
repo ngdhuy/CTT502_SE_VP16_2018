@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo - HTML DOM - Document</title>
+</head>
+<body>
+    <h1>Demo Manage Students</h1>
+    
+    <input type="button" value="Add" onclick="Add()" />
+    <input type="button" value="Delete" onclick="Delete()" />
+    <input type="button" value="Delete All" onclick="DeleteAll()" />
+    
+    <div id="listStudent"></div>
+
+    <script type="text/javascript">
+        var i = 0;
+
+        function Add(){
+            var divNode = document.getElementById('listStudent');
+
+            var pNode = document.createElement("p");
+            divNode.appendChild(pNode);
+
+            var textNode = document.createTextNode("Student " + (i++));
+            pNode.appendChild(textNode);
+        }
+
+        function Delete(){
+            var divNode = document.getElementById('listStudent');
+            console.log(divNode.childNodes.length);
+            if(divNode.childNodes.length > 0) {
+                divNode.removeChild(divNode.lastChild);
+                i--;
+            }
+        }
+
+        function DeleteAll(){
+            var divNode = document.getElementById('listStudent');
+            divNode.innerHTML = "";
+            i = 0;
+        }
+    </script>
+</body>
+</html>

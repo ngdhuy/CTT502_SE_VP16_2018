@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo 360 view Car</title>
+</head>
+<body>
+    <img id="hinh" src="img/001.jpg" width="500" />
+
+    <script type="text/javascript">
+        var hinh = document.getElementById('hinh');
+        var vitri = 1;
+        const max = 144;
+        
+        function DoiHinh(){
+            vitri = vitri + 1;
+
+            if(vitri > max){
+                vitri = 1;
+            }
+            
+            var vitriString = vitri + "";
+            var mau = "000";
+            vitriString = mau.substring(0, mau.length - vitriString.length) + vitriString;
+            var hinhPath = "img/" + vitriString + ".jpg";
+
+            hinh.src = hinhPath;
+        }
+
+        function start(){
+            // 1000s / 25hinh = 40s (load 1 hinh)
+            setInterval(DoiHinh, 40);
+        }
+
+        start();
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo 02</title>
+</head>
+<body>
+    <div>
+        Nhập số:
+        <input type="text" id="txtSo" />
+        <br />
+        <button type="button" onclick="Nhap()">Nhập</button>
+        <button type="button" onclick="ChanLe()">Chẵn lẻ</button>
+        <button type="button" onclick="AmDuong()">Âm dương</button>
+        <button type="button" onclick="ABCD()">ABCD</button>
+
+    </div>
+    <script type="text/javascript">
+        function Nhap(){
+            var so = document.getElementById("txtSo").value; 
+            console.log(so);   
+        }
+
+        function ChanLe(){
+            var so = document.getElementById("txtSo").value;
+
+            // Chuyển chuỗi so sang kiểu số nguyên Int
+            so = parseInt(so);
+
+            if(so % 2 == 0){
+                console.log(so + " là số chẵn");
+            } else {
+                console.log(so + " là số lẻ");       
+            }
+        }
+
+        function AmDuong(){
+            var so = document.getElementById("txtSo").value;
+            
+            // Chuyển chuỗi so sang kiểu số nguyên Int
+            so = parseInt(so);
+
+            if(so < 0){
+                console.log(so + " là số âm");
+            } else {
+                if(so > 0){
+                    console.log(so + " là số dương");
+                } else {
+                    console.log(so + " là số không âm không dương");
+                }
+            }
+        }
+
+        function ABCD(){
+            var so = document.getElementById("txtSo").value;
+
+            switch(so){
+                case 'a':
+                    console.log("--> A");
+                    break;
+                case 'b':
+                    console.log("--> B");
+                    // break;
+                case 'c':
+                    console.log("--> C");
+                    break;
+                case 'd':
+                    console.log("--> D");
+                    break;
+                default:
+                    console.log("==> NO biết");
+                
+            }
+        }
+    </script>
+</body>
+</html>

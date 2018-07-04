@@ -1,0 +1,33 @@
+h1 {
+    color: #cc3366;
+}
+
+h2 {
+    color: #33cc33;
+}
+
+div {
+    margin: 5px;
+}
+
+span {
+    display: inline-block;
+    width: 100px;  
+}
+
+button {
+    margin: 10px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+table, th, td{
+    border: 1px solid #000;
+    border-spacing: 0px;
+}
+
+th, td{
+    padding: 5px 10px;
+}
