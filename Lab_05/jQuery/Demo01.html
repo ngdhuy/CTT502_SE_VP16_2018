@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/icon.ico">
+    <title>Demo jQuery</title>  
+    <style type="text/css">
+        #blockColor{
+            width: 300px;
+            height: 200px;
+            background-color: #cc3366;
+            margin: 50px;
+        }
+
+        button{
+            min-width: 100px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="a">Class a</li>
+        <li class="b">Class b</li>
+        <li class="a">Class a</li>
+        <li class="b">Class b</li>
+    </ul>
+    
+    <p class="a">This is Paragraph 1</p>
+    <p id="idPara">This is Paragraph 1</p>
+    <p>This is Paragraph 1</p>
+    <p>This is Paragraph 1</p>
+    <div>
+        <span>Username:</span>
+        <input type="text" id="txtUS" />
+        <button type="button">Click me</button>
+    </div>
+    <div class="control">
+        <button type="button">Show</button>
+        <button type="button">Hide</button>
+        <button type="button">Fade In</button>
+        <button type="button">Fade Out</button>
+        <button type="button">Toggle</button>
+    </div>
+    <div id="blockColor"></div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("li").css("border","1px solid red");
+            
+            $(".a").css("color","#33cc66");
+
+            $("button").click(function(){
+                var value = $("#txtUS").val();
+                console.log(value);
+                
+            });
+
+            $(".control button:eq(0)").click(function(){
+                $("#blockColor").show(300);
+            });
+
+            $(".control button:eq(1)").click(function(){
+                $("#blockColor").hide(300);
+            });
+
+            $(".control button:eq(2)").click(function(){
+                $("#blockColor").fadeIn(300);
+            });
+
+            $(".control button:eq(3)").click(function(){
+                $("#blockColor").fadeOut(300);
+            });
+
+            $(".control button:eq(4)").click(function(){
+                $("#blockColor").toggle(500);
+            });
+
+        });
+
+        
+    </script>
+</body>
+</html>
